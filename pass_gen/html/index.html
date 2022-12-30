@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password generator</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="content">
+        <form name="iform">
+            <div class="line">
+                <input type="text" id="count" name="count" pattern="[0-9]{3,}">
+                <label>Число символов</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="numbers" name="numbers">
+                <label>Числа</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" name="specials" id="specials">
+                <label>Cпец-символы</label>
+            </div>
+            <div class="column">
+                <input type="text" id="pass" name="pass" readonly>
+            </div>
+            <div class="line1">
+                <input type="button" value="Generate" id="generate" onclick="gen()">
+                <button id="copy" onclick="copy_pass()" disabled data-title="Copied📄" type="button"></button>
+            </div>
+        </form>
+    </div>
+    <script src="../js/script.js" type="text/javascript"></script>
+</body>
+</html>
